@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "973990662259",
+    "firebase_url": "https://fitnesssocial-9e807-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "fitnesssocial-9e807",
+    "storage_bucket": "fitnesssocial-9e807.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:973990662259:android:77bb18b34b5e9c919e1a06",
+        "android_client_info": {
+          "package_name": "com.example.fitnesssocial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "973990662259-vboe6rmgmeeu48bh0hmso3ftkhh29etj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCroPMEvOhVyUo0Ajm3aUwdGOgTR3dpTPY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "973990662259-vboe6rmgmeeu48bh0hmso3ftkhh29etj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

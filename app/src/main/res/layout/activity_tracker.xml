@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_tracker"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrackerActivity">
+
+    <Button
+        android:id="@+id/startExerciseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/start_exercise_button_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="320dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtExerciseType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/mainTextWalking"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgExerciseType"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtExerciseType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_cycling" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imgPace"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:contentDescription="@string/average_pace_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_pace" />
+
+        <ImageView
+            android:id="@+id/imgTime"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/elapsed_time_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_time" />
+
+        <ImageView
+            android:id="@+id/imgDistance"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/distance_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgTime"
+            app:srcCompat="@drawable/ic_distance" />
+
+        <ImageView
+            android:id="@+id/imgCals"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgDistance"
+            app:srcCompat="@drawable/ic_cals" />
+
+        <TextView
+            android:id="@+id/txtTimeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/elapsed_time_label"
+            app:layout_constraintBottom_toBottomOf="@+id/imgTime"
+            app:layout_constraintStart_toEndOf="@+id/imgTime"
+            app:layout_constraintTop_toTopOf="@+id/imgTime" />
+
+        <TextView
+            android:id="@+id/txtCalLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="sans-serif"
+            android:text="Calories Burned"
+            app:layout_constraintBottom_toBottomOf="@+id/imgCals"
+            app:layout_constraintStart_toEndOf="@+id/imgCals"
+            app:layout_constraintTop_toTopOf="@+id/imgCals" />
+
+        <TextView
+            android:id="@+id/txtPaceLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/average_pace_label"
+            app:layout_constraintBottom_toBottomOf="@+id/imgPace"
+            app:layout_constraintStart_toEndOf="@+id/imgPace"
+            app:layout_constraintTop_toTopOf="@+id/imgPace"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/txtDistanceLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/distance_label"
+            app:layout_constraintBottom_toBottomOf="@+id/imgDistance"
+            app:layout_constraintStart_toEndOf="@+id/imgDistance"
+            app:layout_constraintTop_toTopOf="@+id/imgDistance" />
+
+        <TextView
+            android:id="@+id/txtPace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="monospace"
+            app:layout_constraintBottom_toBottomOf="@+id/txtPaceLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/txtPaceLabel"
+            app:layout_constraintTop_toTopOf="@+id/txtPaceLabel"
+            tools:text="3.4 m/s" />
+
+        <Chronometer
+            android:id="@+id/txtTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="monospace"
+            app:layout_constraintBottom_toBottomOf="@+id/txtTimeLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/txtTimeLabel"
+            app:layout_constraintTop_toTopOf="@+id/txtTimeLabel"
+            tools:text="45 minutes" />
+
+        <TextView
+            android:id="@+id/txtDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="monospace"
+            app:layout_constraintBottom_toBottomOf="@+id/txtDistanceLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/txtDistanceLabel"
+            app:layout_constraintTop_toTopOf="@+id/txtDistanceLabel"
+            tools:text="12 m" />
+
+        <TextView
+            android:id="@+id/txtCal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="8 kcal"
+            app:layout_constraintBottom_toBottomOf="@+id/txtCalLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/txtCalLabel"
+            app:layout_constraintTop_toTopOf="@+id/txtCalLabel" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
